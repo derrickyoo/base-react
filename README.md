@@ -8,13 +8,13 @@ See `package.json` scripts.
 
 ### Install Packages
 
-```
+```shell
 npm install
 ```
 
 ### Run Development Server
 
-```
+```shell
 npm run dev
 ```
 
