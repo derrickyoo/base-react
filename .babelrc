@@ -1,20 +1,8 @@
 {
+  "presets": [],
   "plugins": [
-    "@babel/plugin-proposal-class-properties",
-    [
-      "babel-plugin-styled-components",
-      {
-        "displayName": true
-      }
-    ]
-  ],
-  "presets": [
-    "@babel/preset-env",
-    [
-      "@babel/preset-react",
-      {
-        "runtime": "automatic"
-      }
-    ]
+    "macros",
+    "babel-plugin-styled-components",
+    "@babel/plugin-proposal-class-properties"
   ]
 }
