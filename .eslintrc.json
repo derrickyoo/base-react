@@ -6,6 +6,7 @@
     "plugin:jsx-a11y/recommended",
     "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "prettier"
   ],
   "rules": {
@@ -21,25 +22,19 @@
             "message": "Please import from styled-components/macro."
           }
         ],
-        "patterns": [
-          "!styled-components/macro"
-        ]
+        "patterns": ["!styled-components/macro"]
       }
     ]
   },
-  "plugins": [
-    "react",
-    "import",
-    "jsx-a11y",
-    "@typescript-eslint"
-  ],
+  "plugins": ["react", "import", "jsx-a11y", "@typescript-eslint"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2022,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
-    }
+    },
+    "project": ["./tsconfig.json"]
   },
   "env": {
     "es6": true,
@@ -48,10 +43,7 @@
   },
   "settings": {
     "import/parsers": {
-      "@typescript-eslint/parser": [
-        ".ts",
-        ".tsx"
-      ]
+      "@typescript-eslint/parser": [".ts", ".tsx"]
     },
     "import/resolver": {
       "typescript": {
