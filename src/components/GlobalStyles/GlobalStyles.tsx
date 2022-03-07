@@ -1,8 +1,28 @@
 import { createGlobalStyle } from "styled-components/macro";
+import { COLORS, FAMILIES, WEIGHTS } from "../../utils";
 
 const GlobalStyles = createGlobalStyle`
   /* DESIGN TOKENS */
-  :root {}
+  :root {
+    /* FONTS */
+    --font-weight-normal: ${WEIGHTS.normal};
+    --font-weight-medium: ${WEIGHTS.medium};
+    --font-weight-bold: ${WEIGHTS.bold};
+    --font-family-base: ${FAMILIES.base};
+    --font-family-mono: ${FAMILIES.mono};
+
+    /* COLORS */
+    --color-gray-50: ${COLORS.gray[50]};
+    --color-gray-100: ${COLORS.gray[100]};
+    --color-gray-200: ${COLORS.gray[200]};
+    --color-gray-300: ${COLORS.gray[300]};
+    --color-gray-400: ${COLORS.gray[400]};
+    --color-gray-500: ${COLORS.gray[500]};
+    --color-gray-600: ${COLORS.gray[600]};
+    --color-gray-700: ${COLORS.gray[700]};
+    --color-gray-800: ${COLORS.gray[800]};
+    --color-gray-900: ${COLORS.gray[900]};
+  }
 
   /* GLOBAL STYLES */
   *, *::before, *::after {
