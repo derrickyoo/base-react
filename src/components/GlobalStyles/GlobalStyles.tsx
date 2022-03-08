@@ -2,13 +2,16 @@ import { createGlobalStyle } from "styled-components/macro";
 import { COLORS, FAMILIES, WEIGHTS, TYPESCALE } from "../../utils";
 
 const GlobalStyles = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+  
   /* DESIGN TOKENS */
   :root {
     --font-weight-light: ${WEIGHTS.light};
     --font-weight-medium: ${WEIGHTS.medium};
     --font-weight-bold: ${WEIGHTS.bold};
-    --font-family-base: ${FAMILIES.base};
+    --font-family-sans: ${FAMILIES.sans};
     --font-family-mono: ${FAMILIES.mono};
+
     --font-paragraph: ${TYPESCALE.paragraph};
     --font-header1: ${TYPESCALE.header1};
     --font-header2: ${TYPESCALE.header2};
@@ -67,6 +70,7 @@ const GlobalStyles = createGlobalStyle`
   }
   
   body {
+    font-family: var(--font-family-sans);
     font-weight: var(--font-weight-light);
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
