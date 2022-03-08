@@ -1,14 +1,21 @@
 import { createGlobalStyle } from "styled-components/macro";
-import { COLORS, FAMILIES, WEIGHTS } from "../../utils";
+import { COLORS, FAMILIES, WEIGHTS, TYPESCALE } from "../../utils";
 
 const GlobalStyles = createGlobalStyle`
   /* DESIGN TOKENS */
   :root {
-    --font-weight-normal: ${WEIGHTS.normal};
+    --font-weight-light: ${WEIGHTS.light};
     --font-weight-medium: ${WEIGHTS.medium};
     --font-weight-bold: ${WEIGHTS.bold};
     --font-family-base: ${FAMILIES.base};
     --font-family-mono: ${FAMILIES.mono};
+    --font-paragraph: ${TYPESCALE.paragraph};
+    --font-header1: ${TYPESCALE.header1};
+    --font-header2: ${TYPESCALE.header2};
+    --font-header3: ${TYPESCALE.header3};
+    --font-header4: ${TYPESCALE.header4};
+    --font-header5: ${TYPESCALE.header5};
+    --font-small: ${TYPESCALE.small};
 
     --color-gray-50: ${COLORS.gray[50]};
     --color-gray-100: ${COLORS.gray[100]};
@@ -50,12 +57,17 @@ const GlobalStyles = createGlobalStyle`
   * {
     margin: 0;
   }
+
+  html {
+    font-size: 100%;
+  }
   
   html, body {
     height: 100%;
   }
   
   body {
+    font-weight: var(--font-weight-light);
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
   }
@@ -71,6 +83,38 @@ const GlobalStyles = createGlobalStyle`
 
   p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
+  }
+
+  h1, h2, h3, h4, h5, h6, strong {
+    font-weight: var(--font-weight-bold)
+  }
+
+  p {
+    font-size: var(--font-paragraph);
+  }
+
+  h1 {
+    font-size: var(--font-header1);
+  }
+
+  h2 {
+    font-size: var(--font-header2);
+  }
+
+  h3 {
+    font-size: var(--font-header3);
+  }
+    
+  h4 {
+    font-size: var(--font-header4);
+  }
+  
+  h5 {
+    font-size: var(--font-header5);
+  }
+
+  small, .text_small {
+    font-size: var(--font-small);
   }
 
   #root, #__next {
