@@ -1,5 +1,13 @@
+import MaxWidthWrapper from "../MaxWidthWrapper";
+
 const App = () => {
-  return <h1>Base React App</h1>;
+  return (
+    <>
+      <MaxWidthWrapper>
+        <h1> Base React App</h1>
+      </MaxWidthWrapper>
+    </>
+  );
 };
 
 export default App;
