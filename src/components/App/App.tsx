@@ -1,23 +1,32 @@
 import styled from "styled-components/macro";
 import MaxWidthWrapper from "../MaxWidthWrapper";
+import Header from "../Header";
 
 const App = () => {
   return (
     <>
+      <Header />
       <MaxWidthWrapper>
-        <AppHeader>Base React App</AppHeader>
-        <Subheading>Gradients, so hot right now.</Subheading>
+        <HeroWrapper>
+          <AppHeader>Launch. Iterate. Enjoy.</AppHeader>
+          <Subheading>Create Something Delightful.</Subheading>
+        </HeroWrapper>
       </MaxWidthWrapper>
     </>
   );
 };
 
+const HeroWrapper = styled.section`
+  text-align: center;
+  padding: 32px 0px;
+`;
+
 const AppHeader = styled.h1`
-  font-size: 4rem;
+  font-size: 4.125rem;
   background-image: linear-gradient(
     90deg,
-    hsl(47deg 95% 57%),
-    hsl(0deg 100% 65%)
+    hsl(270deg 67% 47%),
+    hsl(330deg 100% 50%)
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -25,7 +34,7 @@ const AppHeader = styled.h1`
 `;
 
 const Subheading = styled.p`
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 `;
 
 export default App;
