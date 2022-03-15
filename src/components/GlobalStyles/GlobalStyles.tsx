@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components/macro";
-import { COLORS, FAMILIES, WEIGHTS, TYPESCALE } from "../../utils";
+import { COLORS, FAMILIES, WEIGHTS, TYPESCALE } from "../../constants";
 
 const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
